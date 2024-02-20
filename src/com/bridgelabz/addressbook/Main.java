@@ -42,4 +42,12 @@ public class Main {
         this.name = name;
         this.multipleAdd = new HashMap<String, ArrayList<AddressBook>>();
     }
+    public void addContacts () {
+        System.out.println("name of addressbook");
+        String name = sc.next();
+//        if (contacts.isEmpty()) {
+        contacts.add(contact);
+        this.multipleAdd.put(name, contacts);
+//        } else {
+    }
 }
