@@ -1,8 +1,8 @@
 package com.bridgelabz.addressbook;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
+import com.bridgelabz.addressbook.AddressBook;
+
+import java.util.*;
 
 public class Main {
     static String name;
@@ -12,5 +12,34 @@ public class Main {
     static AddressBook contact;
     static ArrayList<AddressBook> contacts = new ArrayList<>();
     HashMap<String, ArrayList<AddressBook>> multipleAdd;
-    String searchname;
+    String SearchName;
+
+    public void createContacts() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter details =");
+        System.out.println("Enter first name =");
+        String firstName = sc.next();
+        System.out.println("Enter last name =");
+        String lastName = sc.next();
+        System.out.println("Enter address =");
+        String address = sc.next();
+        System.out.println("Enter city =");
+        String city = sc.next();
+        System.out.println("Enter state =");
+        String state = sc.next();
+        System.out.println("Enter Zip code =");
+        String zip = sc.next();
+        System.out.println("Enter phone number =");
+        String ph_no = sc.next();
+        System.out.println("Enter the email address");
+        String email = sc.next();
+        System.out.println("Contact created");
+        contact = new AddressBook(firstName, lastName, address, city, state, zip, ph_no, email);
+
+    }
+
+    public Main(String name) {
+        this.name = name;
+        this.multipleAdd = new HashMap<String, ArrayList<AddressBook>>();
+    }
 }
