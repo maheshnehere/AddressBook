@@ -34,7 +34,6 @@ public class Main{
         String email = sc.next();
         System.out.println("Contact created");
         contact = new AddressBook(firstName,lastName,address,city,state,zip,ph_no,email);
-
     }
 
     public Main(String name) {
